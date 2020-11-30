@@ -7,7 +7,7 @@ export enum LogTag {
   NOWAY = 'NOWAY',
 }
 
-export enum LogColor {
+enum LogColor {
   DEBUG = 'green',
   ERROR = 'red',
   TEST = 'yellow',
