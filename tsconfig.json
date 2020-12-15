@@ -19,6 +19,7 @@
         "listFiles": false,
         "baseUrl": "src",
         "esModuleInterop": true,
-        "noStrictGenericChecks": false
+        "noStrictGenericChecks": false,
+        "declaration": true
     }
 }
