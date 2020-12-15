@@ -31,7 +31,8 @@ index.ts에는 아래 코드가 들어있는데, 이 코드 덕분에 모듈들�
 require('app-module-path').addPath(__dirname); // 절대경로로 모듈을 불러 올 수 있도록 도와줌
 require('source-map-support').install();
 
-import { Debug, LogTag } from 'Utils/debugTool'; // 예시
+import { Debug, LogTag } from './Utils/debugTool'; // 상대경로 예시
+import { Debug, LogTag } from 'Utils/debugTool'; // 절대경로 예시
 ```
 
 ### Prettier
