@@ -6,7 +6,7 @@
 
 아래 명령어로 레퍼지토리를 바로 빌드할 수 있음
 
-```sh
+```docker
 docker build --tag TAG:VERSION .
 docker build --tag myserver:0.1 . // 예시
 ```
