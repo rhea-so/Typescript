@@ -4,8 +4,8 @@
   "description": "typescript project를 빠르게 시작할 수 있도록 도와주는 template 입니다.",
   "main": "index.js",
   "scripts": {
-    "build": "cd src && tsc",
-    "start": "tsc && node dist/index.js "
+    "build": "tsc",
+    "start": "node dist/index.js "
   },
   "author": "",
   "dependencies": {
