@@ -20,6 +20,7 @@ docker build --tag myserver:0.1 . // 예시
 ```sh
 tsc
 npm publish
+npm unpublish --force PACKAGE_NAME // 강제로 출시한 모듈을 완전 제거하고 싶은 경우
 ```
 
 ### 절대경로로 모듈 불러오기
