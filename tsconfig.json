@@ -13,7 +13,7 @@
         "noFallthroughCasesInSwitch": true,
         "strictNullChecks": true,
         "noUnusedLocals": true,
-        "removeComments": true,
+        "removeComments": false,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "listFiles": false,
