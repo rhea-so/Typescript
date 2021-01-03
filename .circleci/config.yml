@@ -3,7 +3,6 @@ orbs:
   slack: circleci/slack@4.1
 jobs:
   build:
-    tag: /release-.*/
     docker:
       - image: circleci/node:10.23.0
     resource_class: small
@@ -31,5 +30,5 @@ jobs:
 workflows:
   build-and-send-notification:
     jobs:
-      - build
+      - build:
           context: slack-secrets
