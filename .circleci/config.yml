@@ -19,30 +19,24 @@ jobs:
           key: v1-dependencies-{{ checksum "package-lock.json" }}
       - run: npm test
       - run: npm run coverage
-  notify:
-    docker:
-      - image: 'cimg/base:stable'
-    steps:
-      - slack/notify:
-          custom: |
-            {
-              "blocks": [
+      - notify:
+        docker:
+          - image: 'cimg/base:stable'
+        steps:
+          - slack/notify:
+              custom: |
                 {
-                  "type": "section",
-                  "fields": [
+                  "blocks": [
                     {
-                      "type": "plain_text",
-                      "text": "*This is a text notification*",
-                      "emoji": true
+                      "type": "section",
+                      "fields": [
+                        {
+                          "type": "plain_text",
+                          "text": "*This is a text notification*",
+                          "emoji": true
+                        }
+                      ]
                     }
                   ]
                 }
-              ]
-            }
-          event: always
-workflows:
-  send-notification:
-    jobs:
-      - build
-      - notify:
-          context: slack-secrets
+              event: always
