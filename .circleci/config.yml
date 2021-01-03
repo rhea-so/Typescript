@@ -5,6 +5,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.23.0
+      - image: 'cimg/base:stable'
     resource_class: small
     steps:
       - checkout
@@ -19,10 +20,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package-lock.json" }}
       - run: npm test
       - run: npm run coverage
-  notify:
-    docker:
-      - image: 'cimg/base:stable'
-    steps:
       - slack/notify:
           custom: |
             {
@@ -44,4 +41,3 @@ workflows:
   build-and-send-notification:
     jobs:
       - build
-      - notify
