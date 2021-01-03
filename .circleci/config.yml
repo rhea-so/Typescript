@@ -31,4 +31,4 @@ workflows:
   build-and-send-notification:
     jobs:
       - build:
-          context: slack-secrets
+          context: SLACK_ACCESS_TOKEN
