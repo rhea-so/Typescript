@@ -31,4 +31,4 @@ workflows:
   build-and-send-notification:
     jobs:
       - build:
-          context: SLACK_ACCESS_TOKEN
+          context: $SLACK_ACCESS_TOKEN
