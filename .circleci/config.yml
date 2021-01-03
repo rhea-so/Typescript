@@ -30,4 +30,4 @@ jobs:
 workflows:
   build-and-send-notification:
     jobs:
-      - build:
+      - build
