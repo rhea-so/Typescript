@@ -43,6 +43,6 @@ jobs:
 workflows:
   send-notification:
     jobs:
-      - build:
+      - build
       - notify:
           context: slack-secrets
