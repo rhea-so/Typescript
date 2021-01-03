@@ -55,15 +55,6 @@ jobs:
                   ]
                 },
                 {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Mentions*: $SLACK_PARAM_MENTIONS"
-                    }
-                  ]
-                },
-                {
                   "type": "actions",
                   "elements": [
                     {
@@ -73,12 +64,7 @@ jobs:
                         "text": "View Job"
                       },
                       "url": "${CIRCLE_BUILD_URL}"
-                    }
-                  ]
-                },
-                {
-                  "type": "actions",
-                  "elements": [
+                    },
                     {
                       "type": "button",
                       "text": {
