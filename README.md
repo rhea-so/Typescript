@@ -1,6 +1,6 @@
-[![<rhea-so>](https://circleci.com/gh/rhea-so/Typescript.svg?style=svg)](<LINK>)
-
 # Typescript Template
+
+[![<rhea-so>](https://circleci.com/gh/rhea-so/Typescript.svg?style=svg)](<LINK>)
  
  Typescript Project를 만들때 걸리는 시간을 획기적으로 단축시키기 위한 Base Repository
  
