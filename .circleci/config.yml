@@ -80,6 +80,19 @@ jobs:
                       "url": "${CIRCLE_BUILD_URL}"
                     }
                   ]
+                },
+                {
+                  "type": "actions",
+                  "elements": [
+                    {
+                      "type": "button",
+                      "text": {
+                        "type": "plain_text",
+                        "text": "GitHub Repo"
+                      },
+                      "url": "https://github.com/${CIRCLE_USERNAME}/${CIRCLE_PROJECT_REPONAME}/tree/${CIRCLE_BRANCH}"
+                    }
+                  ]
                 }
               ]
             }
