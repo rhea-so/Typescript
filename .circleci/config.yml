@@ -41,10 +41,7 @@ jobs:
             }
           event: always
 workflows:
-  compile:
+  build-and-send-notification:
     jobs:
       - build
-  send-notification:
-    jobs:
-      - notify:
-          context: "slack-secrets"
+      - notify
