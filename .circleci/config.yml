@@ -26,7 +26,7 @@ jobs:
       - slack/notify:
           event: pass
           mentions: '@rhea-so'
-          template: basic_success_1
+          template: basic_on_hold_1
 workflows:
   build-and-send-notification:
     jobs:
