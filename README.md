@@ -1,3 +1,5 @@
+[![<rhea-so>](https://circleci.com/gh/rhea-so/Typescript.svg?style=svg)](<LINK>)
+
 # Typescript Template
  
  Typescript Project를 만들때 걸리는 시간을 획기적으로 단축시키기 위한 Base Repository
@@ -37,10 +39,6 @@ import { Debug, LogTag } from './Utils/debugTool'; // 상대경로 예시
 import { Debug, LogTag } from 'Utils/debugTool'; // 절대경로 예시
 ```
 
-### Prettier
-
-.prettierc 참고
-
 ### Pretty console.log for debug
 
 알록달록하고 예쁘게 시간까지 포함해서 로그를 찍어줌  
@@ -51,6 +49,18 @@ import { Debug, LogTag } from 'Utils/debugTool';
 
 Debug.log(LogTag.NOWAY, 'Hello, World!');
 ```
+
+### CircleCI
+
+CircleCI에 등록, GitHub에 푸시만 하면 알아서 빌드 -> Mocha test까지 진행함
+
+### TDD를 위한 Mocha + NPC
+
+```sh
+npm test # mocha test
+npm run coverage # coverage 폴더에 테스트 결과를 정리해놓음 (테스트 커버리지 나옴)
+```
+
 
 ## Support Git History
 

@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.23.0
+    resource_class: small
     steps:
       - checkout
       - restore_cache:
