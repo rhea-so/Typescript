@@ -5,7 +5,6 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.23.0
-      - image: 'cimg/base:stable'
     resource_class: small
     steps:
       - checkout
@@ -21,22 +20,12 @@ jobs:
       - run: npm test
       - run: npm run coverage
       - slack/notify:
-          custom: |
-            {
-              "blocks": [
-                {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "plain_text",
-                      "text": "*This is a text notification*",
-                      "emoji": true
-                    }
-                  ]
-                }
-              ]
-            }
-          event: always
+          event: fail
+          mentions: '@rhea-so'
+          template: basic_fail_1
+      - slack/notify:
+          event: pass
+          template: success_tagged_deploy_1
 workflows:
   build-and-send-notification:
     jobs:
