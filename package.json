@@ -1,25 +1,29 @@
 {
-  "name": "tstemplate",
-  "version": "1.0.0",
-  "description": "typescript project를 빠르게 시작할 수 있도록 도와주는 template 입니다.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.js",
+  "name": "package-name",
+  "version": "0.1.0",
+  "description": "",
+  "author": "rhea",
+  "keywords": [
+    "template"
+  ],
+
+  "main": "index.js",
+  "types": "index.d.js",
+
   "scripts": {
     "build": "rm -rf dist && tsc",
-    "test": "npm run build && mocha dist/99_Test/**/*.js",
     "start": "npm run build  && node dist/index.js",
-    "coverage": "nyc --reporter html npm test"
+    "test": "npm run build && mocha dist/99_Test/**/*.js",
+    "coverage": "nyc --reporter html --reporter text npm test"
   },
-  "author": "",
+  
   "dependencies": {
     "@types/node": "^14.14.10",
     "app-module-path": "^2.2.0",
     "colors": "^1.4.0",
     "source-map-support": "^0.5.19"
   },
-  "keywords": [
-    "template"
-  ],
+  
   "devDependencies": {
     "@types/mocha": "^8.2.0",
     "mocha": "^8.2.1",
