@@ -5,7 +5,6 @@
     "**/dist": true,
     "**/.vscode": true,
 	"**/node_modules": true,
-	"Dockerfile": true,
 	".npmignore": true,
 	".gitignore": true,
 	".dockerignore": true,

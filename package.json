@@ -6,24 +6,21 @@
   "keywords": [
     "template"
   ],
-
   "main": "index.js",
   "types": "index.d.js",
-
   "scripts": {
     "build": "rm -rf dist && tsc",
     "start": "npm run build  && node dist/index.js",
     "test": "npm run build && mocha dist/99_Test/**/*.js",
     "coverage": "nyc --reporter html --reporter text npm test"
   },
-  
   "dependencies": {
     "@types/node": "^14.14.10",
     "app-module-path": "^2.2.0",
     "colors": "^1.4.0",
+    "rhea-runtime": "^0.1.5",
     "source-map-support": "^0.5.19"
   },
-  
   "devDependencies": {
     "@types/mocha": "^8.2.0",
     "mocha": "^8.2.1",

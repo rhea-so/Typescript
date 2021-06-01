@@ -1,36 +1,28 @@
 import colors from 'colors';
 
-export enum LogTag {
-	DEBUG = 'DEBUG',
-	ERROR = 'ERROR',
-	TEST = 'TEST',
-	NOWAY = 'NOWAY',
-}
-
-enum LogColor {
-	DEBUG = 'green',
-	ERROR = 'red',
-	TEST = 'yellow',
-	NOWAY = 'rainbow',
-}
-
-export class Debug {
-	public static log(...args: any[]) {
-		let tag = args[0];
-		let tagForPrint: string = '';
-		if (LogTag[args[0]] === undefined) {
-			tag = LogTag.DEBUG;
-		} else {
-			args.shift();
-		}
-		tagForPrint = colors[LogColor[tag]](tag);
-
-		console.log(
-			colors.gray(
-				new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')
-			),
-			tagForPrint,
-			...args
-		);
+let isActivate: boolean = true;
+const log = console.log;
+function baseLog(tag: string, ...args: any[]) {
+	if (!isActivate) {
+		return;
 	}
+	const date = new Date();
+	log(
+		colors.gray(date.toISOString().replace(/T/, ' ').replace(/\..+/, '') + ":" + String(date.getMilliseconds()).padStart(3, "0")),
+		tag,
+		...args
+	);
+};
+
+console.log = (...args: any[]) => baseLog(colors.blue('[DEBUG]'), ...args);
+console.error = (...args: any[]) => baseLog(colors.red('[ERROR]'), ...args);
+console.info = (...args: any[]) => baseLog(colors.green('[INFO]'), ...args);
+console.warn = (...args: any[]) => baseLog(colors.yellow('[WARN]'), ...args);
+
+export function disableLogging() {
+	isActivate = false;
+}
+
+export function enableLogging() {
+	isActivate = true;
 }
