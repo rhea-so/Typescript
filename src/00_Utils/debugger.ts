@@ -6,6 +6,7 @@ function baseLog(tag: string, ...args: any[]) {
 	if (!isActivate) {
 		return;
 	}
+
 	const date = new Date();
 	log(
 		colors.gray(date.toISOString().replace(/T/, ' ').replace(/\..+/, '') + ":" + String(date.getMilliseconds()).padStart(3, "0")),
